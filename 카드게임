@@ -1,0 +1,21 @@
+ #include <stdio.h>
+ 
+ int main()
+ {
+ 	int a[10], b, awin=0, bwin=0;
+ 	for(int i=0; i<10; i++)
+ 	{
+ 		scanf("%d", &a[i]);
+	}
+	for(int i=0; i<10; i++)
+ 	{
+ 		scanf("%d", &b);
+ 		if(a[i] > b) awin++;
+ 		else if(a[i] < b) bwin++;
+	}
+	if(awin > bwin) printf("A");
+	else if(awin < bwin) printf("B");
+	else printf("D");
+ 	
+ 	return 0;
+ }
