@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main()
+{
+	int m, n, max=0, x, y;
+	scanf("%d %d", &m, &n);
+	int Gi[n+2][m+2];
+	for(int i=0; i<n+2; i++)
+	{
+		for(int j=0; j<m+2; j++)
+		{
+			if(i==0 || i==n+1 || j==0 || j==m+1) Gi[i][j]=0;
+			else scanf("%d", &Gi[i][j]);
+		}
+	}
+	printf("\n");
+	for(int i=0; i<n+2; i++)
+	{
+		for(int j=0; j<m+2; j++)
+		{
+			printf("%d ", Gi[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n");
+	for(int i=0; i<n+2; i++)
+	{
+		for(int j=0; j<m+2; j++)
+		{
+			if(i!=0 && i!=n+1 && j!=0 && j!=m+1)
+			{
+				if(Gi[i][j]+Gi[i-1][j]+Gi[i+1][j]+Gi[i][j-1]+Gi[i][j+1] >= max)
+				{
+					max = Gi[i][j]+Gi[i-1][j]+Gi[i+1][j]+Gi[i][j-1]+Gi[i][j+1];
+					x = j, y = i;
+				}
+			}
+		}
+		printf("\n");
+	}
+	printf("%d %d %d", x, y, max);
+	
+	return 0;
+}
