@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int def(int n);
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	printf("%d", def(n));
+	
+	return 0;
+}
+
+int def(int n)
+{
+	int r=0;
+	while(n>0)
+	{
+		r += n%10;
+		n /= 10;
+	}
+	return r;
+}
