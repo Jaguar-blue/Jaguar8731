@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int ptr(int n);
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	printf("%d", ptr(n));
+	
+	return 0;
+}
+
+int ptr(int n)
+{
+	int r=1;
+	if(n!=0)
+	{
+		for(int i=n; i>0; i--)
+		{
+			r*=i;
+		}
+	}
+	
+	return r;
+}
