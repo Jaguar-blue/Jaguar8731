@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int n, a, b;
+	scanf("%d", &n);
+	char s[1001], c;
+	for(int i=0; i<n; i++)
+	{
+		scanf("%d", &a);
+		if(a==0)
+		{
+			scanf("%d", &b);
+			for(int j=b; c!='\0'; j++)
+		}
+	}
+	
+	return 0;
+}
