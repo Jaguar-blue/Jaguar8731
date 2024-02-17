@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+	char w[10001];
+	scanf("%s", &w);
+	for(int i=0; w[i]!='\0'; i++)
+	{
+		for(int j=i; w[j]!='\0'; j++)
+		{
+			printf("%c", w[j]);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
