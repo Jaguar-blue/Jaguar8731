@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+	char m[14], s[14];
+	int intm=0, ints=0;
+	scanf("%s%s", &m, &s);
+	for(int i=0; i<13; i++)
+	{
+		if('0' <= m[i] && m[i] <= '9') intm += m[i]-'0';
+		else intm += 10+m[i]-'A';
+	}
+	for(int i=0; i<13; i++)
+	{
+		if('0' <= s[i] && s[i] <= '9') ints += s[i]-'0';
+		else ints += 10+s[i]-'A';
+	}
+	if(intm > ints) printf("sir");
+	else printf("kid");
+	
+	return 0;
+}
