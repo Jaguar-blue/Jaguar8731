@@ -13,7 +13,7 @@ int main()
 		scanf("%d", &a);
 		if(i!=0 && a > s.top())
 		{
-			while(s.empty()==0) s.pop();
+			while(s.top() < a) s.pop();
 		}
 		s.push(a);
 	}
