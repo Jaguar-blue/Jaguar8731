@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+	int n;
+	scanf("%d", &n);
+	int a[n-1], c, maxc=0;
+	for(int n; i<n; i++)
+	{
+		scanf("%d", &a[i]);
+	}
+	sort(a, a+n-1);
+	for(int n; i<n; i++)
+	{
+		if(i==0 or a[i]!=a[i-1]) c=0;
+		c++;
+		if(c>maxc) maxc=c;
+	}
+	for(int n; i<n; i++)
+	{
+		if(i==0 or a[i]!=a[i-1]) c=0;
+		c++;
+		if(c==maxc)
+		{
+			printf("%d", &a[i]);
+			break;
+		}
+	}
+	
+	return 0;
+}
