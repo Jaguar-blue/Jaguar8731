@@ -12,7 +12,6 @@ int main()
 		else if(b%2!=0) break;
 		else b/=2, cnt++;
 	}
-	printf("%d ", b);
 	if(a==b) printf("%d", cnt);
 	else printf("-1");
 	
